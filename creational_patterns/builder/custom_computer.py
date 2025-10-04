@@ -9,7 +9,7 @@ class Computer:
         info = (
             f"Memory: {self.memory}GB",
             f"Hard Disk: {self.hdd}GB",
-            f"Graphics Card: {self.gpu}GB"
+            f"Graphics Card: {self.gpu}"
         )
         return "\n".join(info)
     
