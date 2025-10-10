@@ -112,3 +112,8 @@ facade = SmartHomeFacade(
 facade.good_morning()
 facade.leave_home()
 facade.good_night()
+
+# Advantages:
+# - One liners
+# - App only depends on SmartHomeFacade. Internals can change without touching callers.
+# - Facade documents the "right way" to use the system.
