@@ -12,7 +12,6 @@ class Song:
         self.artist = artist
         self.duration = duration
 
-
     def __repr__(self):
         mins, secs = divmod(self.duration, 60)
         return f"{self.title} by {self.artist} [{mins}:{secs:02d}]"
@@ -23,7 +22,6 @@ class PlaylistIterator(Iterator):
         self._songs = songs
         self._index = 0
     
-
     def __next__(self) -> Song:
         if self._index < len(self._songs):
             song = self._songs[self._index]
@@ -31,6 +29,9 @@ class PlaylistIterator(Iterator):
             return song
         
         raise StopIteration
+    
+    # def __iter__(self):
+    #     return self
     
 # The Aggregate (iterable)
 class Playlist:
