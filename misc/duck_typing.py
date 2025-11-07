@@ -18,7 +18,7 @@ person = Person()
 make_it_quack(duck)     # Output: Quack, quack!
 make_it_quack(person)   # Output: I'm pretending to be a duck!
 
-# ✅ Advantages:
+# Advantages:
 
 # Flexibility: Promotes polymorphism without rigid inheritance hierarchies.
 
@@ -26,7 +26,7 @@ make_it_quack(person)   # Output: I'm pretending to be a duck!
 
 # Fits Python’s dynamic nature.
 
-# ⚠️ Disadvantages:
+# Disadvantages:
 
 # Potential runtime errors: If an object doesn’t implement the expected behavior, you’ll get an AttributeError at runtime.
 

@@ -36,8 +36,10 @@ class LightFactory(UIFactory):
         return LightCheckbox()
     
 class DarkFactory(UIFactory):
-    def create_button(self): return DarkButton()
-    def create_checkbox(self): return DarkCheckbox()
+    def create_button(self): 
+        return DarkButton()
+    def create_checkbox(self): 
+        return DarkCheckbox()
 
 def ui_factory(theme: str) -> UIFactory:
     return LightFactory() if theme.lower()=="light" else DarkFactory()

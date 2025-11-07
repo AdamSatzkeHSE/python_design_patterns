@@ -138,3 +138,32 @@ if __name__ == "__main__":
     
     total_value = sum(d.accept(value_visitor) for d in docs)
     print("Total value:", total_value)
+
+# What happens?:
+# Each document calls its own accept method
+# Which calls the right method of the visitor
+#m Se we get type-specific behavior - no use of isinstance() is necessary
+
+# Why not just use isinstance() ?
+def export(doc):
+    if isinstance(doc, Invoice):
+        ...
+    elif isinstance(doc, Report):
+        ...
+
+# But that has two problems:
+# 1. You get a giant if/else that grows forever
+# 2. Every new operation means another giant if/else
+
+# The visitor pattern keeps all logic for one operation in one class
+
+# When to use the Visitor
+# - When you have a known set of classes
+# - When you want to add operations frequently (export, bill, log, validate)
+# - When you want to avoid editing classes every time
+
+# When not to use the Visitor:
+# - Your class hierarchy changes a lot (because then every visitor must change)
+# - You only need one operation
+# - Simple polymorphism works
+
