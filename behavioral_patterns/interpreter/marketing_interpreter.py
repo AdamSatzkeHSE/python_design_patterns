@@ -3,7 +3,7 @@
 
 Interpreter pattern defines a small grammar (mini-language)
 a class for each grammar rule (Expressions)
-and an interpreter (context) method that ecaluates an abstract syntax tree against some context.
+and an interpreter (context) method that evaluates an abstract syntax tree against some context.
 """
 
 """ The interpreter design pattern is used when the language is modest and domain specific.

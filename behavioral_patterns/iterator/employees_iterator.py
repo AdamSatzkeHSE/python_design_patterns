@@ -46,6 +46,9 @@ class CompanyIterator(Iterator):
                 raise StopIteration
             self._employee_iter = iter(self._departments[self._dept_index])
             return next(self._employee_iter)
+    
+    def __iter__(self):
+        return self
         
 # Aggregate 2: Company
 class Company:
@@ -53,12 +56,12 @@ class Company:
         self.name = name
         self._departments = []
 
-    def add_department(self, deparment: Department):
-        self._departments.append(deparment)
+    def add_department(self, department: Department):
+        self._departments.append(department)
 
     def __iter__(self) -> CompanyIterator:
         """ Return an iterator to loop through all employees in all deparments"""
-        return CompanyIterator
+        return CompanyIterator(self._departments)
     
 # Usage
 
